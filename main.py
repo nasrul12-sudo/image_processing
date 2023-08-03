@@ -1,4 +1,5 @@
 from layouting import *
+from histogram import *
 import os.path
 from PIL import Image
 from processing_list import *
@@ -57,7 +58,7 @@ while True:
         except:
             pass
 
-    elif event == "image_thresholding":
+    elif event == " ":
         try:
             window["cancel"].update(visible=True)
             window["type_processing"].update("Image Thresholding")
@@ -87,8 +88,10 @@ while True:
 
             window["type_processing"].update("Image Negative")
             output_image = negative(input_image, color_depth)
+            histogram = calculate_horizontal_histogram(image_input)
             output_image.save(filename_out)
             window["preview_output_image"].update(filename=filename_out)
+            window['preview_output_histogram'].update('hallo')
         except:
             pass
 
