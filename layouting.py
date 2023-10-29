@@ -30,9 +30,6 @@ list_processing = [
     [sg.Button("Equalization Greyscale", size=(16, 1), key="equalization_greyscale")],
     [sg.Button("Equalization Color", size=(16, 1), key="equalizer_greyscale")],
 
-
-
-
   
     [
         # TEXT LABEL
